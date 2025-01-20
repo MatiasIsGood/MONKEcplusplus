@@ -16,36 +16,36 @@
     <Filter Include="Header Files\ignore">
       <UniqueIdentifier>{90a13d44-9605-4a0f-9223-ea10ae698ef7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\cs2">
+      <UniqueIdentifier>{429ff722-8a51-40b6-a237-a155c9430101}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="source.hpp">
-      <Filter>Header Files\ignore</Filter>
-    </ClInclude>
     <ClInclude Include="code.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="cg_local.h">
+    <ClInclude Include="global_macros.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cg_offsets.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="cs2\interface.hpp">
+      <Filter>Source Files\cs2</Filter>
+    </ClInclude>
+    <ClInclude Include="cs2\interfaces\icvar.hpp">
+      <Filter>Source Files\cs2</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>Header Files\ignore</Filter>
     </ClCompile>
     <ClCompile Include="code.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cs2\interface.cpp">
+      <Filter>Source Files\cs2</Filter>
+    </ClCompile>
+    <ClCompile Include="cs2\interfaces\icvar.cpp">
+      <Filter>Source Files\cs2</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

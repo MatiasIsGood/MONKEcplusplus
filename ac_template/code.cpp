@@ -1,22 +1,58 @@
-#include "pch.h"
+#include "global_macros.hpp"
+#include "cs2/interface.hpp"
+#include "cs2/interfaces/icvar.hpp"
 
-void setwangle(float* r_yaw, float* w_yaw, float angle) {
-	float temp_angle = fmodf(*r_yaw, 360);
-	temp_angle -= temp_angle * 2 - angle;
-	*w_yaw += temp_angle;
+#include <Windows.h>
+#include <iostream>
+#include <ranges>
+
+//kerran kun ohjelma alkaa
+void __init()
+{
+	CStaticInterfaces::Init();
+	CStaticInterfaces::InitNested();
+
 }
 
-void __main() {
+void destroyGame() {
+	ConVarElem* vars = ICvar::GetAllCvars();
+	unsigned short totalVariables = ICvar::GetCount();
+
+	for (int i = 0; i < totalVariables; i++) {
+		CConVar* var = vars[i].element;
+		if (var != nullptr && (var->m_eType == EConVarType_Int32)) {
+			var->m_oValue.m_i32Value += 1;
+		}
+	}
+}
+
+void removeFlag(CConVar* var, int64_t flag) {
+	var->m_iFlags &= ~flag;
+}
+
+void PrintCheats()
+{
+	ConVarElem* vars = ICvar::GetAllCvars();
+	unsigned short totalVariables = ICvar::GetCount();
 	
+	for (int i = 0; i < totalVariables; i++) {
+		CConVar* var = vars[i].element;
+		if (var != nullptr && (var->m_iFlags & FCVAR_HIDDEN) != 0) {
+			std::cout << var->m_sName << "\n";
+			removeFlag(var, FCVAR_CHEAT);
+			removeFlag(var, FCVAR_HIDDEN);
+		}
+	}
+
+}
+
+//loop
+void __main()
+{
 	if (KeyPressed(VK_INSERT)) {
 		
-		
-		clients->cgameViewangles[YAW]; //r_yaw
-		clients->viewangles[YAW]; //w_yaw
-
-		setwangle(&clients->cgameViewangles[ROLL], &clients->viewangles[ROLL], 45);
-
+		destroyGame();
 	}
-	
+
 	Sleep(3);
 }
