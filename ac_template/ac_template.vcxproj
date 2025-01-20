@@ -158,15 +158,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="code.hpp" />
+    <ClInclude Include="cs2\engine\cmd.hpp" />
     <ClInclude Include="cs2\interface.hpp" />
     <ClInclude Include="cs2\interfaces\icvar.hpp" />
     <ClInclude Include="global_macros.hpp" />
+    <ClInclude Include="utils\engine.hpp" />
+    <ClInclude Include="utils\process.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="code.cpp" />
+    <ClCompile Include="cs2\engine\cmd.cpp" />
     <ClCompile Include="cs2\interface.cpp" />
     <ClCompile Include="cs2\interfaces\icvar.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="utils\engine.cpp" />
+    <ClCompile Include="utils\process.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

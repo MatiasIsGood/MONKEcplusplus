@@ -19,6 +19,12 @@
     <Filter Include="Source Files\cs2">
       <UniqueIdentifier>{429ff722-8a51-40b6-a237-a155c9430101}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\cs2\engine">
+      <UniqueIdentifier>{ff2781db-eb45-44ec-b865-433fb9415468}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils">
+      <UniqueIdentifier>{58a0808b-24af-4a8f-bbbb-1a906bd48844}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code.hpp">
@@ -33,6 +39,15 @@
     <ClInclude Include="cs2\interfaces\icvar.hpp">
       <Filter>Source Files\cs2</Filter>
     </ClInclude>
+    <ClInclude Include="cs2\engine\cmd.hpp">
+      <Filter>Source Files\cs2\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\engine.hpp">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\process.hpp">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -46,6 +61,15 @@
     </ClCompile>
     <ClCompile Include="cs2\interfaces\icvar.cpp">
       <Filter>Source Files\cs2</Filter>
+    </ClCompile>
+    <ClCompile Include="cs2\engine\cmd.cpp">
+      <Filter>Source Files\cs2\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\engine.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\process.cpp">
+      <Filter>Source Files\utils</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -92,7 +92,7 @@ union CVValue_t
 	std::uint64_t m_u64Value;
 	float		  m_flValue;
 	double		  m_dbValue;
-	const char*   m_szValue;
+	const char* m_szValue;
 	Color		  m_clrValue;
 	Vector2D	  m_vec2Value;
 	Vector		  m_vec3Value;
