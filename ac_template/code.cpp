@@ -4,6 +4,7 @@
 
 #include <Windows.h>
 #include <iostream>
+#include <string>
 #include <ranges>
 
 //kerran kun ohjelma alkaa
@@ -30,7 +31,7 @@ void removeFlag(CConVar* var, int64_t flag) {
 	var->m_iFlags &= ~flag;
 }
 
-void PrintCheats()
+void printCheats()
 {
 	ConVarElem* vars = ICvar::GetAllCvars();
 	unsigned short totalVariables = ICvar::GetCount();
@@ -46,12 +47,38 @@ void PrintCheats()
 
 }
 
+bool returnSelectedNames(std::string name, std::string letters) {
+	
+	if (name.empty()) {
+		return false;
+	}
+	
+	return name.substr(0, 2) == letters;
+	//return name[(name.size() - 1)] == letters;
+
+}
+
+void printVarsByLetters(std::string letters) {
+	ConVarElem* vars = ICvar::GetAllCvars();
+	unsigned short totalVariables = ICvar::GetCount();
+
+	for (int i = 0; i < totalVariables; i++) {
+		CConVar* var = vars[i].element;
+		bool funny = returnSelectedNames(var->m_sName, letters);
+		if (var != nullptr && (funny == true)) {
+			std::cout << var->m_sName << "\n";
+		}
+	}
+
+}
+
 //loop
 void __main()
 {
 	if (KeyPressed(VK_INSERT)) {
 		
-		destroyGame();
+		printVarsByLetters("de");
+
 	}
 
 	Sleep(3);
