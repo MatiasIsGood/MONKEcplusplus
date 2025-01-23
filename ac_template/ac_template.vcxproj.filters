@@ -25,6 +25,15 @@
     <Filter Include="Source Files\utils">
       <UniqueIdentifier>{58a0808b-24af-4a8f-bbbb-1a906bd48844}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\cs2\client">
+      <UniqueIdentifier>{459af87e-9b54-489b-b38e-04704a3bcc15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mh">
+      <UniqueIdentifier>{33467030-1ba8-4fbb-ad29-5f018d8117bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mh\hde">
+      <UniqueIdentifier>{e6f5907b-3efa-4b79-96e0-604b015bb646}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code.hpp">
@@ -46,6 +55,12 @@
       <Filter>Source Files\utils</Filter>
     </ClInclude>
     <ClInclude Include="utils\process.hpp">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="cs2\client\vgui_fpspanel.hpp">
+      <Filter>Source Files\cs2\client</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\hook.hpp">
       <Filter>Source Files\utils</Filter>
     </ClInclude>
   </ItemGroup>
@@ -70,6 +85,24 @@
     </ClCompile>
     <ClCompile Include="utils\process.cpp">
       <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="cs2\client\vgui_fpspanel.cpp">
+      <Filter>Source Files\cs2\client</Filter>
+    </ClCompile>
+    <ClCompile Include="mh\hde\hde32.c">
+      <Filter>Source Files\mh\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="mh\hde\hde64.c">
+      <Filter>Source Files\mh\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="mh\trampoline.c">
+      <Filter>Source Files\mh</Filter>
+    </ClCompile>
+    <ClCompile Include="mh\buffer.c">
+      <Filter>Source Files\mh</Filter>
+    </ClCompile>
+    <ClCompile Include="mh\hook.c">
+      <Filter>Source Files\mh</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

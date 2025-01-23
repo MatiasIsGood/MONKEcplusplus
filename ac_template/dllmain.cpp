@@ -59,10 +59,10 @@ void DLL_GameplayLoop()
     {
         if (KeyPressed(VK_HOME))
             break;
-
+        
         __main();
     }
-
+    __exit();
     std::cout << "\nGoodbye!!\n";
     Sleep(500);
     return;

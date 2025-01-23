@@ -5,7 +5,7 @@ using namespace std::string_literals;
 
 static scan_data Cbuf_AddTextPattern{ 
 	"\x48\x8B\x0D\x91\x81\x3B\x00\x45\x33\xC9\x4C\x8B\xC2\x48\x8B\x01\x41\x8D\x51\x05\x48\xFF\xA0\xC8\x00\x00\x00"s, 
-	"xxxx????xxxxxxxxxxxxxxxxxxxx"s };
+	"xxx????xxxxxxxxxxxxxxxxxxxxx"s };
 
 void Cbuf_AddText(const char* text)
 {
